@@ -7,19 +7,44 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="app">
-        <div class="profile">
-            <img src="profile.jpg" alt="Profile Picture" class="profile-pic">
-            <h1 class="name">John Doe</h1>
-            <p class="bio">Full Stack Developer | Open Source Enthusiast</p>
+    <header class="navbar">
+        <div class="navbar-container">
+            <h1 class="navbar-title">John Doe</h1>
         </div>
-        <div class="links">
-            <a href="https://github.com" class="link" target="_blank">GitHub</a>
-            <a href="https://linkedin.com" class="link" target="_blank">LinkedIn</a>
-            <a href="https://twitter.com" class="link" target="_blank">Twitter</a>
-            <a href="https://portfolio.com" class="link" target="_blank">Portfolio</a>
-        </div>
-    </div>
+    </header>
+    <main id="app">
+        <section class="profile-section">
+            <div class="profile">
+                <img src="profile.jpg" alt="Profile Picture" class="profile-pic">
+                <h1 class="name">John Doe</h1>
+                <p class="bio">Full Stack Developer | Open Source Enthusiast</p>
+            </div>
+        </section>
+        <section class="about-section">
+            <h2>About Me</h2>
+            <p>I am a passionate full-stack developer with a love for building web applications and contributing to open source projects. With a background in both front-end and back-end development, I strive to deliver efficient and scalable solutions.</p>
+        </section>
+        <section class="projects-section">
+            <h2>Projects</h2>
+            <ul class="project-list">
+                <li><a href="https://project1.com" target="_blank">Project 1</a> - A description of the first project.</li>
+                <li><a href="https://project2.com" target="_blank">Project 2</a> - A description of the second project.</li>
+                <li><a href="https://project3.com" target="_blank">Project 3</a> - A description of the third project.</li>
+            </ul>
+        </section>
+        <section class="links-section">
+            <h2>Links</h2>
+            <div class="links">
+                <a href="https://github.com" class="link" target="_blank">GitHub</a>
+                <a href="https://linkedin.com" class="link" target="_blank">LinkedIn</a>
+                <a href="https://twitter.com" class="link" target="_blank">Twitter</a>
+                <a href="https://portfolio.com" class="link" target="_blank">Portfolio</a>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2024 John Doe. All Rights Reserved.</p>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>

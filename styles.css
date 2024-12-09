@@ -1,18 +1,54 @@
+/* General Styles */
 body {
     background-color: #121212;
     color: #e0e0e0;
     font-family: 'Arial', sans-serif;
     margin: 0;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
+h1, h2 {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #1f1f1f;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-title {
+    color: #00ff00;
+    font-size: 1.5em;
+}
+
+/* Main Content */
 #app {
+    flex: 1;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Profile Section */
+.profile-section {
     text-align: center;
-    width: 90%;
-    max-width: 400px;
+    margin-bottom: 40px;
 }
 
 .profile-pic {
@@ -24,14 +60,67 @@ body {
 }
 
 .name {
-    font-size: 1.5em;
+    font-size: 1.8em;
     color: #00ff00;
 }
 
 .bio {
     font-size: 1em;
     color: #ffa500;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+}
+
+/* About Section */
+.about-section {
+    margin-bottom: 40px;
+}
+
+.about-section h2 {
+    color: #00ff00;
+    margin-bottom: 10px;
+}
+
+.about-section p {
+    line-height: 1.6;
+}
+
+/* Projects Section */
+.projects-section {
+    margin-bottom: 40px;
+}
+
+.projects-section h2 {
+    color: #00ff00;
+    margin-bottom: 10px;
+}
+
+.project-list {
+    list-style: none;
+    padding: 0;
+}
+
+.project-list li {
+    margin-bottom: 10px;
+}
+
+.project-list a {
+    color: #ffa500;
+    transition: color 0.3s;
+}
+
+.project-list a:hover {
+    color: #00ff00;
+}
+
+/* Links Section */
+.links-section {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.links-section h2 {
+    color: #00ff00;
+    margin-bottom: 10px;
 }
 
 .links {
@@ -47,10 +136,19 @@ body {
     padding: 10px 20px;
     border-radius: 30px;
     font-size: 1em;
-    transition: background 0.3s;
+    transition: background 0.3s, color 0.3s;
 }
 
 .link:hover {
     background: linear-gradient(90deg, #ffa500, #00ff00);
     color: #e0e0e0;
+}
+
+/* Footer */
+.footer {
+    background-color: #1f1f1f;
+    text-align: center;
+    padding: 10px 0;
+    color: #777;
+    font-size: 0.9em;
 }
