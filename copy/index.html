@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Копилка Данных</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap; /* Позволяет блокам переноситься */
+            gap: 20px; /* Расстояние между блоками */
+        }
+
+        .block {
+            background-color: #1e1e1e;
+            border-radius: 12px;
+            padding: 20px;
+            flex: 1 1 calc(33.333% - 20px); /* Адаптивная ширина (3 блока в строку) */
+            max-width: calc(33.333% - 20px); /* Максимальная ширина блока */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            box-sizing: border-box; /* Учитывать padding в размере */
+        }
+
+        @media (max-width: 768px) {
+            .block {
+                flex: 1 1 calc(50% - 20px); /* 2 блока в строку на меньших экранах */
+                max-width: calc(50% - 20px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .block {
+                flex: 1 1 100%; /* 1 блок в строку на узких экранах */
+                max-width: 100%;
+            }
+        }
+
+        .block h3 {
+            margin: 0 0 10px;
+            font-size: 1.2em;
+        }
+
+        .copy-text {
+            background-color: #2a2a2a;
+            border: none;
+            border-radius: 8px;
+            color: #ffffff;
+            padding: 10px;
+            font-size: 1em;
+            margin-bottom: 10px;
+            word-break: break-word;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .copy-btn {
+            background-color: #6200ea;
+            color: #ffffff;
+            border: none;
+            border-radius: 8px;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+
+        .copy-btn:hover {
+            background-color: #3700b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Copy Data Site</h1>
+    <div class="container">
+        <div class="block">
+            <h3>Ключ VPN №1</h3>
+            <input class="copy-text" type="text" value="vless://example-key-1" readonly>
+            <button class="copy-btn" onclick="copyText(this)">Copy</button>
+        </div>
+
+    </div>
+
+    <script>
+        function copyText(button) {
+            const input = button.previousElementSibling;
+            input.select();
+            input.setSelectionRange(0, 99999); // для мобильных устройств
+            navigator.clipboard.writeText(input.value)
+                .then(() => alert('Text Copy: ' + input.value))
+                .catch(() => alert('Error copy.'));
+        }
+    </script>
+</body>
+</html>
