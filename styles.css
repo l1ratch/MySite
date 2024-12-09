@@ -123,25 +123,28 @@ a {
     margin-bottom: 10px;
 }
 
-.links {
+.social-links {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     gap: 15px;
 }
 
-.link {
-    text-decoration: none;
-    color: #121212;
-    background: linear-gradient(90deg, #00ff00, #ffa500);
-    padding: 10px 20px;
-    border-radius: 30px;
-    font-size: 1em;
-    transition: background 0.3s, color 0.3s;
+.social-link {
+    width: 50px;
+    height: 50px;
+    background-color: #1f1f1f;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #e0e0e0;
+    font-size: 1.5em;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-.link:hover {
-    background: linear-gradient(90deg, #ffa500, #00ff00);
-    color: #e0e0e0;
+.social-link:hover {
+    background-color: #00ff00;
+    color: #121212;
 }
 
 /* Footer */
